@@ -1,0 +1,290 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0);
+    padding: 1rem;
+}
+
+.hamburguerBtn{
+    background-color: aliceblue;
+    padding: .4rem .8rem;
+    border-radius: .3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+.home{
+    background-image: url(/imgs/homebgMobile.jfif);
+    background-size: contain;
+}
+
+.interactive{
+    background-image: url(/imgs/sportsbgmobile.jfif);
+    background-size: cover;
+}
+
+.plans{
+    background-color: black;
+}
+
+.mainContent{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(53, 202, 53, 0);
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+.libraryContent{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(231, 57, 57, 0);
+    text-align: center;
+    align-content: center;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+.bilboardContent{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(128, 255, 0, 0);
+    text-align: center;
+}
+
+.headline{
+    text-transform: uppercase;
+    font-size: 1rem;
+    color:hsl(153,99%,27%) ;
+}
+
+.sectionTitle{
+    font-size: 2.3rem;
+}
+
+.mainContent button{
+    width: 100%;
+    padding: 1rem;
+    border-radius: .3rem;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: hsl(150,81%,51%);
+}
+
+.legalLinks{
+    display: flex;
+    flex-direction: column;
+}
+
+.trioBundle{
+    background-color: rgba(137, 43, 226, 0);
+}
+
+.trioBundle button{
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    width: 60%;
+}
+
+.small{
+    font-size: .8rem;
+    color: rgb(107, 88, 88);
+}
+
+.libraryGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgba(0, 255, 255, 0);
+    gap: 1rem;
+}
+
+.libraryCard{
+    width: 100%;
+    aspect-ratio: 1/1.5;
+    background-size: contain;
+    border-radius: .3rem;
+    padding: 1rem;
+}
+
+.libraryCardOverlay{
+    background-color: rgba(0, 0, 0, 0.466);
+    text-align: start;
+}
+
+.tagCard{
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+.titleCard{
+    font-size: 1.5rem;
+    margin-top: .5rem;
+}
+
+.card1{
+    background-image: url(/imgs/bobsBurguer.jfif);
+}
+
+.card2{
+    background-image: url(/imgs/prey.jfif);
+}
+
+.card3{
+    background-image: url(/imgs/handmaidtale.jfif);
+}
+
+.card4{
+    background-image: url(/imgs/houseofdragon.jfif);
+}
+
+.bilboardContent p{
+    margin: 0 1.5rem;
+}
+
+.bottomArrow{
+    background-color: rgba(7, 38, 65, 0);
+    width: fit-content;
+    margin: 0 auto;
+    animation: arrow infinite 1.3s ease-in-out;
+}
+.arrow{
+    width: 1.4rem;
+    aspect-ratio: 1/1;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(-45deg);
+}
+
+.interactive nav ul{
+    display: flex;
+    font-size: .8rem;
+    justify-content: space-between;
+}
+
+
+
+.togglePlans{
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.containerPlans{
+    display: flex;
+    width: 100%;
+}
+
+.plan{
+    width: 100%;
+    background-color: rgba(29, 121, 202, 0.301);
+    padding: .3rem;
+    text-align: center;
+}
+
+.plan span{
+    font-size: .6rem;
+    background-color: hsl(150,81%,51%);
+    padding: .2rem .5rem;
+    border-radius: .5rem;
+    color: black;
+}
+
+.plan button{
+    width: 100%;
+    padding: 1rem;
+    border-radius: .3rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.monthlyPrice{
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.containerPrices{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer{
+    background-color: hsl(216,12%,92%);
+    /* color: hsl(217,14%,18%); */
+    
+    color: hsl(220,10%,41%);
+}
+
+.footerContent{
+    padding: 1rem;
+}
+
+.socials{
+    display: flex;
+    gap: 1rem;
+    font-size: 1.3rem;
+}
+
+.footerLegalLinks{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: .9rem;
+}
+
+.legalLink a{
+    text-decoration: none;
+}
+
+
+
+
+@keyframes arrow{
+    50%{
+        transform: translateY(10px);
+    }
+}
+.hide{
+    display: none;
+}
