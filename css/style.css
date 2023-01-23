@@ -45,12 +45,12 @@ section{
 }
 
 .home{
-    background-image: url(/imgs/homebgMobile.jfif);
+    background-image: url(../imgs/homebgMobile.jfif);
     background-size: contain;
 }
 
 .interactive{
-    background-image: url(/imgs/sportsbgmobile.jfif);
+    background-image: url(../imgs/sportsbgmobile.jfif);
     background-size: cover;
 }
 
@@ -157,19 +157,19 @@ section{
 }
 
 .card1{
-    background-image: url(/imgs/bobsBurguer.jfif);
+    background-image: url(../imgs/bobsBurguer.jfif);
 }
 
 .card2{
-    background-image: url(/imgs/prey.jfif);
+    background-image: url(../imgs/prey.jfif);
 }
 
 .card3{
-    background-image: url(/imgs/handmaidtale.jfif);
+    background-image: url(../imgs/handmaidtale.jfif);
 }
 
 .card4{
-    background-image: url(/imgs/houseofdragon.jfif);
+    background-image: url(../imgs/houseofdragon.jfif);
 }
 
 .bilboardContent p{
