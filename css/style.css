@@ -1,4 +1,11 @@
 
+@font-face {
+    font-family: 'Main';
+    src: url(/fonts/GraphikRegular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -13,9 +20,15 @@ ul{
     list-style: none;
 }
 
+p{
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+
 body{
     background-color: rgb(0, 0, 0);
     color: white;
+    font-family: 'Main', 'Arial Narrow', Arial, sans-serif;
 }
 
 header{
@@ -24,19 +37,20 @@ header{
     justify-content: space-between;
     align-items: center;
     background-color: rgba(255, 0, 0, 0);
-    padding: 1rem;
+    padding: 1rem 1.5rem;
 }
 
 .hamburguerBtn{
-    background-color: aliceblue;
-    padding: .4rem .8rem;
-    border-radius: .3rem;
+    background-color: hsl(219,15%,23%);
+    padding: .8rem 1.1rem;
+    border-radius: .4rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: .7rem;
 }
 
-section{
+.sectionPrefab{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,13 +59,42 @@ section{
 }
 
 .home{
-    background-image: url(./imgs/homebgMobile.jfif);
-    background-size: contain;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(255, 255, 255, 0),rgba(0, 0, 0, 0.8));
+    
+    position: relative;
+}
+
+.home::after{
+    content: '';
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../imgs/homebgMobile.jfif);
+    background-size: cover;
+    z-index: -1;
 }
 
 .interactive{
-    background-image: url(./imgs/sportsbgmobile.jfif);
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(255, 255, 255, 0),rgba(0, 0, 0, 0.8));
+    
+    position: relative;
+    
+}
+
+.interactive::after{
+    content: '';
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../imgs/sportsbgmobile.jfif);
     background-size: cover;
+    background-position: center;
+    z-index: -1;
 }
 
 .plans{
@@ -62,7 +105,7 @@ section{
     display: flex;
     flex-direction: column;
     background-color: rgba(53, 202, 53, 0);
-    padding: 2rem;
+    padding: 3rem;
     align-items: center;
     text-align: center;
 }
@@ -86,12 +129,30 @@ section{
 
 .headline{
     text-transform: uppercase;
-    font-size: 1rem;
-    color:hsl(153,99%,27%) ;
+    font-size: .8rem;
+    /* color:hsl(153,99%,27%) ; */
+    color:  rgba(29, 231, 130, 0.8);
+    margin-bottom: 1rem;
+    font-weight: bolder;
+}
+
+.subheadline{
+    margin: 1rem 0;
+    font-size: 1.1rem;
 }
 
 .sectionTitle{
-    font-size: 2.3rem;
+    font-size: 2.1rem;
+    margin: 1rem;
+    font-weight: bolder;
+}
+
+.terms{
+    font-size: .8rem;
+}
+
+.SignUpHuluOnly{
+    margin: 1rem 0;
 }
 
 .mainContent button{
@@ -103,6 +164,7 @@ section{
     text-transform: uppercase;
     font-weight: bold;
     background-color: hsl(150,81%,51%);
+    margin: 1rem 0;
 }
 
 .legalLinks{
@@ -112,25 +174,41 @@ section{
 
 .trioBundle{
     background-color: rgba(137, 43, 226, 0);
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(53, 202, 53, 0);
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.trioBundle p{
+    font-size: .8rem;
+    margin: 1rem 0;
 }
 
 .trioBundle button{
     background-color: transparent;
     border: 2px solid white;
     color: white;
-    width: 60%;
+    padding:1rem 2rem;
+    border-radius: .3rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .small{
     font-size: .8rem;
     color: rgb(107, 88, 88);
 }
-
+/*-------------------- SECTION LIBRARY ----------------------------*/
 .libraryGrid{
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: rgba(0, 255, 255, 0);
     gap: 1rem;
+    margin-bottom: 8rem;
 }
 
 .libraryCard{
@@ -142,7 +220,7 @@ section{
 }
 
 .libraryCardOverlay{
-    background-color: rgba(0, 0, 0, 0.466);
+    background-color: rgba(0, 0, 0, 0);
     text-align: start;
 }
 
@@ -157,53 +235,155 @@ section{
 }
 
 .card1{
-    background-image: url(./imgs/bobsBurguer.jfif);
+    background-image: url(../imgs/bobsBurguer.jfif);
 }
 
 .card2{
-    background-image: url(./imgs/prey.jfif);
+    background-image: url(../imgs/prey.jfif);
 }
 
 .card3{
-    background-image: url(./imgs/handmaidtale.jfif);
+    background-image: url(../imgs/handmaidtale.jfif);
 }
 
 .card4{
-    background-image: url(./imgs/houseofdragon.jfif);
+    background-image: url(../imgs/houseofdragon.jfif);
 }
+
+/*-------------------- SECTION BILLBOARD ----------------------------*/
+
+
 
 .bilboardContent p{
     margin: 0 1.5rem;
 }
 
 .bottomArrow{
-    background-color: rgba(7, 38, 65, 0);
+    background-color: rgba(7, 38, 65, 0.815);
     width: fit-content;
     margin: 0 auto;
     animation: arrow infinite 1.3s ease-in-out;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
 }
 .arrow{
-    width: 1.4rem;
+    width: .8rem;
     aspect-ratio: 1/1;
     border-left: 2px solid white;
     border-bottom: 2px solid white;
     transform: rotate(-45deg);
 }
 
-.interactive nav ul{
-    display: flex;
-    font-size: .8rem;
-    justify-content: space-between;
+.bilboardContent .small{
+    margin: 1rem 0;
+    color: rgba(255, 255, 255, 0.63);
+    font-size: .7rem;
+    padding:0 1rem;
 }
 
+/*-------------------- SECTION INTERACTIVE ----------------------------*/
 
+.interactive{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+/* section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: space-between;
+} */
+
+.navInteractive{
+    top: 0;
+    position: relative;
+    display: flex;
+    background-color: rgba(0, 255, 255, 0);
+    margin-bottom: 7rem;
+}
+
+/* NAV INTERACTIVE */
+
+.navInteractive ul{
+    display: flex;
+    gap: 1.5rem;
+}
+.navInteractive a{
+    position: relative;
+    text-decoration: none;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+#marker{
+    position: absolute;
+    left: 0;
+    height: .4rem;
+    width: 0%;
+    bottom: -.8rem;
+    transition: .3s ease;
+    background-color: rgb(255, 255, 255);
+}
+
+/* BALLS */
+
+.channelsBalls{
+    background-color: rgba(255, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    gap: 1.8rem;
+    margin:1.8rem 0;
+
+}
+
+.ball{
+    width: 3rem;
+    aspect-ratio: 1/1;
+    background-color: white;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.ball img{
+    width: 90%;
+}
+
+/*------------------------- SECTION PLANS ------------------------------*/
 
 .togglePlans{
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-around;
+    padding: 1rem;
+}
+
+.togglePlans img{
+    width: 100%;
+}
+
+.toggleButton{
+    position: relative;
+    width: 70%;
+    height: 2.5rem;
+    background-color: rgba(128, 128, 128, 0.541);
+    border-radius: 1.5rem;
+}
+
+.toggleButton .ballToggle{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: white;
+    border-radius: 50%;
 }
 
 .containerPlans{
@@ -213,7 +393,7 @@ section{
 
 .plan{
     width: 100%;
-    background-color: rgba(29, 121, 202, 0.301);
+    background-color: rgba(29, 121, 202, 0);
     padding: .3rem;
     text-align: center;
 }
@@ -242,12 +422,37 @@ section{
     text-align: center;
     padding: 1rem;
 }
-
 .containerPrices{
     margin-top: 1rem;
     display: flex;
     justify-content: space-around;
 }
+
+.standard{
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.standard .insideDiv{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.fa-check{
+    color: hsl(150,81%,51%);
+}
+
+.fa-xmark{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+/* -------------------------- FOOTER ---------------------------------- */
 
 footer{
     background-color: hsl(216,12%,92%);
@@ -257,24 +462,26 @@ footer{
 }
 
 .footerContent{
-    padding: 1rem;
+    padding:2rem 1rem ;
 }
 
 .socials{
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     font-size: 1.3rem;
+    margin: 2rem 0;
 }
 
 .footerLegalLinks{
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap:1rem 2rem;
     font-size: .9rem;
 }
 
 .legalLink a{
     text-decoration: none;
+    font-size: .75rem;
 }
 
 
